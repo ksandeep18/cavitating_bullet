@@ -1,0 +1,81 @@
+{
+  "features": [
+    "shape_enc",
+    "theta_eff",
+    "beta",
+    "param1",
+    "param2",
+    "aspect_ratio_cav",
+    "sigma_c",
+    "Re",
+    "depth_m",
+    "Froude"
+  ],
+  "targets": [
+    "Cdp",
+    "Csf",
+    "Cd",
+    "L_tilde",
+    "D_tilde"
+  ],
+  "shape_classes": [
+    "cone",
+    "disc",
+    "elliptical",
+    "ogive_polynomial",
+    "spherical",
+    "truncated_cone"
+  ],
+  "metrics": {
+    "Cdp": {
+      "RF": 0.9971,
+      "XGB": 0.9976,
+      "best": "XGB"
+    },
+    "Csf": {
+      "RF": 0.9766,
+      "XGB": 0.9757,
+      "best": "RF"
+    },
+    "Cd": {
+      "RF": 0.9881,
+      "XGB": 0.99,
+      "best": "XGB"
+    },
+    "L_tilde": {
+      "RF": 0.9881,
+      "XGB": 0.9885,
+      "best": "XGB"
+    },
+    "D_tilde": {
+      "RF": 0.9876,
+      "XGB": 0.9872,
+      "best": "RF"
+    }
+  },
+  "feat_importance_shap": {
+    "shape_enc": 0.0014,
+    "theta_eff": 0.5215,
+    "beta": 0.0676,
+    "param1": 0.0022,
+    "param2": 0.0009,
+    "aspect_ratio_cav": 0.0046,
+    "sigma_c": 0.3289,
+    "Re": 0.0699,
+    "depth_m": 0.003,
+    "Froude": 0.0
+  },
+  "best_models": {
+    "Cdp": "XGB",
+    "Csf": "RF",
+    "Cd": "XGB",
+    "L_tilde": "XGB",
+    "D_tilde": "RF"
+  },
+  "body_fixed": {
+    "D_body_mm": 30,
+    "D_hemi_mm": 15,
+    "L_total_mm": 115,
+    "dc_mm": 12
+  }
+}
